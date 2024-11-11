@@ -3,8 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <title>Currency Converter</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+    <div class="header">
+        <div class="header_title">Xe Clone</div>
+        <div class="header_links">
+            <div class="link">Send Money</div>
+            <div class="link">Converter</div>
+            <div class="link">Currency API</div>
+            <div class="link">Tools</div>
+        </div>
+        <div class="header_buttons">
+            <button id="sign_in">Sign In</button>
+            <button id="register">Register</button>
+        </div>
+    </div>
+    <div class="background">
+        <div class="bgTop">
+            <div id="title">Currency Converter</div>
+        </div>
+        <div class="bgBottom"></div>
+    </div>
+    <div class="main">
+        <div class="main_box">
+            <div class="main_box_nav">
+                <div class="nav_tab" id="convert">Convert</div>
+                <div class="nav_tab" id="send">Send</div>
+                <div class="nav_tab" id="charts">Charts</div>
+                <div class="nav_tab" id="alerts">Alerts</div>
+            </div>
+            <div class="main_box_body">
+                <div>
+                    <label for="amount">Amount:</label><br>
+                    <input type="text" id="amount">
+                </div>
+                <div>
+                    <label for="from">From:</label><br>
+                    <input type="text" id="from">
+                </div>
+                <div>
+                    <label for="to">To:</label><br>
+                    <input type="text" id="to">
+                </div>
+            </div>
+        </div>
+        <div class="convert_boxes">
+            <div class="convert_box" id="box_A">
+                Convert US Dollar to Euro
+            </div>
+            <div class="convert_box" id="box_B">
+                Convert Euro to USD
+            </div>
+        </div>
+    </div>
 </body>
 </html>
