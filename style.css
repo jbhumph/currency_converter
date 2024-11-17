@@ -114,6 +114,7 @@ body {
     display: flex;
     padding: 10px;
     justify-content: space-evenly;
+    align-items: center;
 }
 
 .main_box_body label {
@@ -134,7 +135,12 @@ select {
     border-radius: 10px;
     background-color: white;
     height: 30px;
+    width: 170px;
     box-sizing: content-box;
+}
+
+#swap_button {
+
 }
 
 .main_box_button {
@@ -223,7 +229,7 @@ select {
     display: flex;
     width: 100%;
     justify-content: space-between;
-    font-size: 15px;
+    font-size: 12px;
 }
 
 .box_item {
