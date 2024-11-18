@@ -48,6 +48,26 @@ const exchangeRates = {
     }
 }
 
+async function getData() {
+    try {
+        const response = await fetch('https://v6.exchangerate-api.com/v6/dd5e7d4110155f0f4bb12db4/latest/USD')
+        const data = await response.json();
+        exchangeRates.rates.AUD = data.conversion_rates.AUD;
+        exchangeRates.rates.CAD = data.conversion_rates.CAD;
+        exchangeRates.rates.CLP = data.conversion_rates.CLP;
+        exchangeRates.rates.CNY = data.conversion_rates.CNY;
+        exchangeRates.rates.EUR = data.conversion_rates.EUR;
+        exchangeRates.rates.GBP = data.conversion_rates.GBP;
+        exchangeRates.rates.INR = data.conversion_rates.INR;
+        exchangeRates.rates.JPY = data.conversion_rates.JPY;
+        exchangeRates.rates.RUB = data.conversion_rates.RUB;
+        exchangeRates.rates.ZAR = data.conversion_rates.ZAR;
+    } catch (error) {
+        console.error(error)
+        alert("Error retrieving current exchange rates from API. Using logged past rates. Please try again later.")
+    }
+}
+
 // validate number input
 function validate() {
 
@@ -108,3 +128,5 @@ function drawBox(curA, curB) {
 
     convert_boxes.appendChild(convert_box);
 }
+
+let promise = getData();
